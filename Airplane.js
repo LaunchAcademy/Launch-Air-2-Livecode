@@ -1,13 +1,14 @@
 class Airplane {
-  constructor(make, model, capacity) {
+  constructor(make, model, capacity){
     this.make = make
     this.model = model
     this.capacity = capacity
     this.flights = []
   }
 
-  scheduleFlight(flight) {
+  scheduleFlight(flight){
     this.flights.push(flight)
+    return this.flights
   }
 }
 

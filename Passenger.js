@@ -1,25 +1,15 @@
-import Ticket from "./Ticket.js"
+import Ticket from './Ticket.js'
 
 class Passenger {
-  constructor(name) {
+  constructor(name){
     this.name = name
     this.flights = []
   }
 
-  purchaseTicket(flight, seatNumber) {
-    // create a new ticket
-    // debugger
-    let newTicket = new Ticket(
-      flight,
-      this,
-      seatNumber
-    )
-
-    // add the flight into the passenger's flight array
+  purchaseTicket(flight, seat){
+    let ticket = new Ticket(flight, this.name, seat)
     this.flights.push(flight)
-
-    // return the new ticket so we can save it as a variable
-    return newTicket
+    return ticket
   }
 }
 
