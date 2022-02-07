@@ -1,31 +1,24 @@
+import Airplane from "./Airplane.js"
+import Flight from "./Flight.js"
+import Passenger from "./Passenger.js"
+
 // your code here
-import Airplane from './Airplane.js'
-import Flight from './Flight.js'
-import Passenger from './Passenger.js'
+const boeingMax = new Airplane("Boeing", "Max", 250)
+const romansFlight = new Flight("Oct 1", "9 am", "11 am", "Boston", "Chicago")
+boeingMax.scheduleFlight(romansFlight)
 
-let magic777 = new Airplane('Magic', '777', 150)
+const johnDoe = new Passenger("John Doe")
+const suzyQ = new Passenger("Suzy Q")
+console.log("Our passengers:", johnDoe, suzyQ)
+
 let maidenFlight = new Flight(
-    'September 2',
-    '10am',
-    '1pm',
-    'Boston',
-    'San Diego'
+  'September 2',
+  '10AM',
+  '1PM',
+  'Boston',
+  'San Diego'
 )
-let secondFlight = new Flight(
-    'September 3',
-    '10am',
-    '1pm',
-    'San Deigo',
-    'Bos Diego'
-)
-
-let mrTaco = new Passenger('Mr. Taco')
-let msMonkey = new Passenger('Ms. Monkey')
-let tacoTicket = mrTaco.purchaseTicket(maidenFlight, 'cabin kitchen seat')
-let monkeyTicket = msMonkey.purchaseTicket(secondFlight, 'EmergencyExitSeatB')
-magic777.scheduleFlight(maidenFlight)
-magic777.scheduleFlight(secondFlight)
-
-console.log(magic777)
-console.log(tacoTicket)
-console.log(monkeyTicket)
+let earhart = new Passenger('Amelia Earhart')
+let ticket1 = earhart.purchaseTicket(maidenFlight, '6E')
+console.log(ticket1)
+console.log(earhart.tickets)
